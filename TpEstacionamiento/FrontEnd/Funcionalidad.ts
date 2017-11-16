@@ -4,7 +4,7 @@
 
 $(document).ready(function(){
     localStorage.setItem("claveUsuario","1234");
-    localStorage.setItem("claveAdmin","hola");
+    localStorage.setItem("claveCliente","hola");
 });
 
 
@@ -21,7 +21,7 @@ function Ingresar(){
     var email = $("#email").val();
     var clave = $("#clave").val();
     var funcionAjax = $.ajax({
-        url:"http://localhost:80/Estacionamiento/BackEnd/Clases/ingreso.php",
+        url:"http://localhost:80/Estacionamiento/Clases/ingreso.php",
         type:"POST",
         data:{  email,
                 clave
@@ -42,7 +42,7 @@ function Guardar()
     var color= $("#color").val();
     var marca = $("#marca").val();
     var funcionAjax = $.ajax({
-        url:"http://localhost:80/Estacionamiento/BackEnd/Clases/guardar.php",
+        url:"http://localhost:80/Estacionamiento/Clases/guardar.php",
         type: "POST",
         data: { patente,
                 email,
@@ -64,7 +64,7 @@ function Borrar()
     var color= $("#color").val();
     var marca = $("#marca").val();
     var funcionAjax = $.ajax({
-        url:"http://localhost:80/Estacionamiento/BackEnd/Clases/borrar.php",
+        url:"http://localhost:80/Estacionamiento/Clases/borrar.php",
         type: "POST",
         data: { patente,
                 email,
